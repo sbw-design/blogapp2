@@ -11,4 +11,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  
+  
+  # 以下から書き始めた
+    root "home#index"
+  get '/' => 'home#index'
+  get '/about' => 'home#about'
 end
