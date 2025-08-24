@@ -14,7 +14,5 @@ Rails.application.routes.draw do
   
   
   # 以下から書き始めた
-    root "home#index"
-  get '/' => 'home#index'
-  get '/about' => 'home#about'
+  root "articles#index"
 end
