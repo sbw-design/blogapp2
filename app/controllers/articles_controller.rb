@@ -1,9 +1,7 @@
-class HomeController < ApplicationController
+class ArticlesController < ApplicationController
   def index
     # render 'home/index' 書かなくても良い
     @article = Article.first
   end
   
-  def about
-  end
 end
