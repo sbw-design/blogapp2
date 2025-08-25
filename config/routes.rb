@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   # 以下から書き始めた
   root "articles#index"
   
-  resources :articles, only: [:show, :new, :create]
+  resources :articles, only: [:show, :new, :create, :edit, :update]
 end
