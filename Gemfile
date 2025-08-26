@@ -20,7 +20,7 @@ gem "jbuilder"
 gem "sassc-rails"
 
 gem 'faker'
-
+# hamlitはhaml-railsの高速版の為、haml-railsは不要
 gem 'hamlit'
 
 # Use Redis adapter to run Action Cable in production
