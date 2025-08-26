@@ -21,6 +21,8 @@ gem "sassc-rails"
 
 gem 'faker'
 
+gem 'hamlit'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -48,11 +50,17 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+  
+  gem 'pry-byebug'
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  
+  gem 'erb2haml'
+  # erb2hamlはruby3.2では動かないため、html2hamlを使用
+  gem 'html2haml'
 end
 
 group :test do
