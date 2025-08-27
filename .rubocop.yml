@@ -1,8 +1,40 @@
-# Omakase Ruby styling for Rails
-inherit_gem: { rubocop-rails-omakase: rubocop.yml }
+# # omakase設定
+# # Omakase Ruby styling for Rails
+# inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 
-# Overwrite or add rules to create your own house style
-#
-# # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
-# Layout/SpaceInsideArrayLiteralBrackets:
-#   Enabled: false
+# # Overwrite or add rules to create your own house style
+# #
+# # # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
+# # Layout/SpaceInsideArrayLiteralBrackets:
+# #   Enabled: false
+
+# デイトラ設定
+AllCops:
+  # 元々2.6が入っていたが、3.2に変更
+  TargetRubyVersion: 3.2
+  DisabledByDefault: true
+  Exclude:
+    - db/schema.rb
+    - vendor/bundle/**/*
+    - node_modules/**/*
+
+Bundler/OrderedGems:
+  Enabled: true
+
+Layout/EmptyLines:
+  Enabled: true
+
+Layout/TrailingEmptyLines:
+  Enabled: true
+
+Layout/TrailingWhitespace:
+  Enabled: true
+
+Style/MethodDefParentheses:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: single_quotes
