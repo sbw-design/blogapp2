@@ -23,6 +23,8 @@ gem 'faker'
 # hamlitはhaml-railsの高速版の為、haml-railsは不要
 gem 'hamlit'
 
+gem 'annotate'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
