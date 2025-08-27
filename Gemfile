@@ -25,6 +25,10 @@ gem 'faker'
 gem 'hamlit'
 # デイトラインストール
 gem 'annotate'
+# デイトラインストール
+gem 'better_errors'
+# デイトラインストール
+gem 'binding_of_caller'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

@@ -80,8 +80,14 @@ GEM
     ast (2.4.3)
     base64 (0.3.0)
     benchmark (0.4.1)
+    better_errors (2.10.1)
+      erubi (>= 1.0.0)
+      rack (>= 0.9.0)
+      rouge (>= 1.0.0)
     bigdecimal (3.2.2)
     bindex (0.8.1)
+    binding_of_caller (1.0.1)
+      debug_inspector (>= 1.2.0)
     bootsnap (1.18.6)
       msgpack (~> 1.2)
     brakeman (7.1.0)
@@ -105,6 +111,7 @@ GEM
     debug (1.11.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    debug_inspector (1.2.0)
     drb (2.2.3)
     erb (5.0.2)
     erb2haml (0.1.5)
@@ -259,6 +266,7 @@ GEM
     reline (0.6.2)
       io-console (~> 0.5)
     rexml (3.4.1)
+    rouge (4.6.0)
     rubocop (1.79.2)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
@@ -273,20 +281,12 @@ GEM
     rubocop-ast (1.46.0)
       parser (>= 3.3.7.2)
       prism (~> 1.4)
-    rubocop-performance (1.25.0)
-      lint_roller (~> 1.1)
-      rubocop (>= 1.75.0, < 2.0)
-      rubocop-ast (>= 1.38.0, < 2.0)
     rubocop-rails (2.33.3)
       activesupport (>= 4.2.0)
       lint_roller (~> 1.1)
       rack (>= 1.1)
       rubocop (>= 1.75.0, < 2.0)
       rubocop-ast (>= 1.44.0, < 2.0)
-    rubocop-rails-omakase (1.1.0)
-      rubocop (>= 1.72)
-      rubocop-performance (>= 1.24)
-      rubocop-rails (>= 2.30)
     ruby-progressbar (1.13.0)
     ruby_parser (3.21.1)
       racc (~> 1.5)
@@ -367,6 +367,8 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  better_errors
+  binding_of_caller
   bootsnap
   brakeman
   capybara
@@ -381,7 +383,6 @@ DEPENDENCIES
   puma (>= 5.0)
   rails (~> 7.2.2, >= 7.2.2.2)
   rubocop-rails
-  rubocop-rails-omakase
   sassc-rails
   selenium-webdriver
   sprockets-rails
