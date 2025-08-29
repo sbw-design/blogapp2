@@ -23,12 +23,14 @@ gem 'sassc-rails'
 gem 'faker'
 # hamlitはhaml-railsの高速版の為、haml-railsは不要
 gem 'hamlit'
+gem 'haml-rails'
 # デイトラインストール
 gem 'annotate'
 # デイトラインストール
 gem 'better_errors'
 # デイトラインストール
 gem 'binding_of_caller'
+gem 'devise'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

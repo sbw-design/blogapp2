@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   # 以下から書き始めた
   root 'articles#index'
-
+  
+  devise_for :users
   resources :articles
 end
