@@ -22,7 +22,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
+  # 記事が削除されるときに、関連する記事も削除する
   has_many :articles, dependent: :destroy
+  # ユーザーが削除されるときに、関連するプロフィールも削除する
+  has_one :profile, dependent: :destroy
   
   def has_written?(article)
     articles.exists?(id: article.id)
