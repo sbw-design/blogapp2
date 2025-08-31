@@ -27,7 +27,7 @@ class User < ApplicationRecord
   # ユーザーが削除されるときに、関連するプロフィールも削除する
   has_one :profile, dependent: :destroy
   
-  delegate :birthday, :gender, to: :profile, allow_nil: true
+  delegate :birthday, :age, :gender, to: :profile, allow_nil: true
   
   def has_written?(article)
     articles.exists?(id: article.id)
