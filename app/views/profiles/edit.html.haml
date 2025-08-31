@@ -18,9 +18,9 @@
       -# selectでclassを指定する場合、第4引数に入れる必要があるため、空のハッシュを第3引数に入れている
       = f.select :gender, Profile.genders.keys, {}, {class: 'text'}
     %div
-      = f.label :birthdate, '生年月日'
+      = f.label :birthday, '生年月日'
     %div
-      = f.date_field :birthdate, class: 'text'
+      = f.date_field :birthday, class: 'text'
     %div
       =f.label :subscribed, '通知を受け取る'
       = f.check_box :subscribed
