@@ -22,13 +22,47 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
+  # 記事が削除されるときに、関連する記事も削除する
   has_many :articles, dependent: :destroy
+  # ユーザーが削除されるときに、関連するプロフィールも削除する
+  has_one :profile, dependent: :destroy
+  
+  delegate :birthday, :age, :gender, to: :profile, allow_nil: true
   
   def has_written?(article)
     articles.exists?(id: article.id)
   end
   
   def display_name
-    self.email.split('@').first
+    # if profile && profile.nickname
+    #   profile.nickname
+    # else
+    #   self.email.split('@').first
+    # end
+    
+    # ぼっち演算子
+    profile&.nickname || self.email.split('@').first
+  end
+  
+  # "delegate :birthday, :gender, to: :profile, allow_nil: true"で指定しているので以下不要
+  # 
+  # def birthday
+  #   profile&.birthday
+  # end
+  
+  # def gender
+  #   profile&.gender
+  # end
+  
+  def prepare_profile
+    profile || build_profile
+  end
+  
+  def avatar_image
+    if profile&.avatar&.attached?
+      profile.avatar
+    else
+      'default-avatar.png'
+    end
   end
 end
