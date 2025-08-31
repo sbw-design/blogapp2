@@ -26,6 +26,8 @@ class User < ApplicationRecord
   has_many :articles, dependent: :destroy
   # ユーザーが削除されるときに、関連するいいねも削除する
   has_many :likes, dependent: :destroy
+  # 自分がいいねした記事を取得する
+  has_many :favorite_articles, through: :likes, source: :article
   # ユーザーが削除されるときに、関連するプロフィールも削除する
   has_one :profile, dependent: :destroy
   
