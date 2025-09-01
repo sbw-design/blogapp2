@@ -61,11 +61,13 @@ group :development, :test do
   # 元からインストールされており、下記は有効化されていた
   # gem "rubocop-rails-omakase", require: false;
 
-  # デイトラインストール
+  # インストール
   gem 'pry-byebug'
 
-  # デイトラインストール
+  # コードの品質を保つための静的解析ツール
   gem 'rubocop-rails'
+  # 環境変数を.envファイルに保存して読み込むためのgem
+  gem 'dotenv-rails'
 end
 
 group :development do
