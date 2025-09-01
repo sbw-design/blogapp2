@@ -17,20 +17,21 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
-# デイトラインストール
+# インストール
 gem 'sassc-rails'
-# デイトラインストール
+# インストール
 gem 'faker'
 # hamlitはhaml-railsの高速版の為、haml-railsは不要
 gem 'hamlit'
 gem 'haml-rails'
-# デイトラインストール
+# インストール
 gem 'annotate'
-# デイトラインストール
+# インストール
 gem 'better_errors'
-# デイトラインストール
+# インストール
 gem 'binding_of_caller'
 gem 'devise'
+gem 'aws-sdk-s3', require: false
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
