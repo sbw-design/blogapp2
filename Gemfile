@@ -5,7 +5,8 @@ gem 'rails', '~> 7.2.2', '>= 7.2.2.2'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '>= 1.4'
+# gem 'sqlite3', '>= 1.4'
+gem 'pg', '>= 0.18', '< 2.0'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '>= 5.0'
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
@@ -17,20 +18,21 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
-# デイトラインストール
+# インストール
 gem 'sassc-rails'
-# デイトラインストール
+# インストール
 gem 'faker'
 # hamlitはhaml-railsの高速版の為、haml-railsは不要
 gem 'hamlit'
 gem 'haml-rails'
-# デイトラインストール
+# インストール
 gem 'annotate'
-# デイトラインストール
+# インストール
 gem 'better_errors'
-# デイトラインストール
+# インストール
 gem 'binding_of_caller'
 gem 'devise'
+gem 'aws-sdk-s3', require: false
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -61,11 +63,13 @@ group :development, :test do
   # 元からインストールされており、下記は有効化されていた
   # gem "rubocop-rails-omakase", require: false;
 
-  # デイトラインストール
+  # インストール
   gem 'pry-byebug'
 
-  # デイトラインストール
+  # コードの品質を保つための静的解析ツール
   gem 'rubocop-rails'
+  # 環境変数を.envファイルに保存して読み込むためのgem
+  gem 'dotenv-rails'
 end
 
 group :development do
